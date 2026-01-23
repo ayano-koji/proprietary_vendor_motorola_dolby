@@ -16,6 +16,11 @@ PRODUCT_COPY_FILES += \
     $(DOLBY_PATH)/configs/dolby/dax-moto_2.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-moto_2.xml \
     $(DOLBY_PATH)/configs/dolby/dax-moto_3.xml:$(TARGET_COPY_OUT_VENDOR)/etc/dolby/dax-moto_3.xml
 
+
+# DolbyAtmos
+PRODUCT_PACKAGES += \
+    DolbyAtmos
+
 # Sepolicy
 BOARD_VENDOR_SEPOLICY_DIRS += $(DOLBY_PATH)/sepolicy/vendor
 
