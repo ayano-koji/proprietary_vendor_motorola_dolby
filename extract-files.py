@@ -15,6 +15,8 @@ from extract_utils.fixups_blob import (
 )
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/vintf/manifest/vendor.dolby.media.c2@1.0-service.xml': blob_fixup()
+     .regex_replace(r'            <instance>software</instance>\n', ''),
     (
         'vendor/lib/libdlbpreg.so',
         'vendor/lib/soundfx/libdlbvol.so',
