@@ -17,4 +17,5 @@ hal_client_domain(mediacodec, hal_aidl_dms)
 allow hal_aidl_dms_default vendor_dolby_file:dir rw_dir_perms;
 allow hal_aidl_dms_default vendor_dolby_file:file create_file_perms;
 
+set_prop(hal_aidl_dms_default, vendor_mot_dolby_prop)
 get_prop(hal_aidl_dms_default, vendor_mot_dolby_prop)
