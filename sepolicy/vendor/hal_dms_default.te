@@ -1,0 +1,20 @@
+type hal_aidl_dms_service, service_manager_type, hal_service_type, protected_service;
+
+type hal_aidl_dms_default, domain;
+hal_server_domain(hal_aidl_dms_default, hal_aidl_dms)
+
+type hal_aidl_dms_default_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_aidl_dms_default)
+
+hal_attribute_service(hal_aidl_dms, hal_aidl_dms_service)
+
+binder_call(hal_aidl_dms_client, hal_aidl_dms_server)
+binder_call(hal_aidl_dms_server, hal_aidl_dms_client)
+
+hal_client_domain(hal_audio_default, hal_aidl_dms)
+hal_client_domain(mediacodec, hal_aidl_dms)
+
+allow hal_aidl_dms_default vendor_dolby_file:dir rw_dir_perms;
+allow hal_aidl_dms_default vendor_dolby_file:file create_file_perms;
+
+get_prop(hal_aidl_dms_default, vendor_mot_dolby_prop)
