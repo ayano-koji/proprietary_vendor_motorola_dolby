@@ -1,2 +1,2 @@
 # Dolby
-vendor.dolby.dms.IDms/default    u:object_r:hal_dms_aidl_service:s0
+vendor.dolby.dms.IDms/default    u:object_r:hal_aidl_dms_service:s0
